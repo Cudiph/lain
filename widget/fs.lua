@@ -49,7 +49,8 @@ local function factory(args)
             fs.notification_preset.screen = fs.followtag and focused() or scr or 1
             fs.notification = naughty.notify {
                 preset  = fs.notification_preset,
-                timeout = type(seconds) == "number" and seconds or 5
+                timeout = type(seconds) == "number" and seconds or 5,
+                app_name = "awesomewm_widget",
             }
         end)
     end

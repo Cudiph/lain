@@ -67,7 +67,8 @@ local function factory(args)
             preset  = notification_preset,
             text    = weather.notification_text,
             icon    = weather.icon_path,
-            timeout = type(seconds) == "number" and seconds or notification_preset.timeout
+            timeout = type(seconds) == "number" and seconds or notification_preset.timeout,
+            app_name = "awesomewm_widget",
         }
     end
 
